@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Test Information</h2>
+
+<table>
+  <tr>
+    <th>Test Name</th>
+    <th>Description</th>
+    <th>Test Mode</th>
+    <th>Time</th>
+    <th>Total Score</th>
+    <th>Test Date Time</th>
+  </tr>
+  <% @tests.each do |test| %>
+  <tr>
+    <td><%= test.test_name %></td>
+    <td><%= test.description %></td>
+    <td><%= test.test_mode%></td>
+    <td><%= test.time%></td>
+    <td><%= test.total_score%></td>
+    <td><%= test.test_date_time%></td>
+
+  </tr>
+  <% end %>
+  
+</table>
+
+</body>
+</html>
